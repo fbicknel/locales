@@ -3,6 +3,9 @@ comment_char %
 % Locale for English locale in the USA
 % Contributed by Ulrich Drepper <drepper@redhat.com>, 2000
 
+% Modified for 24-hour time use
+% copy this to /usr/share/i18n/locales
+
 LC_IDENTIFICATION
 title      "English locale for the USA"
 source     "Free Software Foundation, Inc."
@@ -82,7 +85,7 @@ day	"<U0053><U0075><U006E><U0064><U0061><U0079>";/
 	"<U0053><U0061><U0074><U0075><U0072><U0064><U0061><U0079>"
 
 week    7;19971130;7
-first_weekday	1
+first_weekday	2
 first_workday	2
 abmon	"<U004A><U0061><U006E>";"<U0046><U0065><U0062>";/
 	"<U004D><U0061><U0072>";"<U0041><U0070><U0072>";/
@@ -103,16 +106,18 @@ mon	"<U004A><U0061><U006E><U0075><U0061><U0072><U0079>";/
 	"<U004E><U006F><U0076><U0065><U006D><U0062><U0065><U0072>";/
 	"<U0044><U0065><U0063><U0065><U006D><U0062><U0065><U0072>"
 % Appropriate date and time representation (%c)
-%	"%a %d %b %Y %r %Z"
-d_t_fmt "<U0025><U0061><U0020><U0025><U0064><U0020><U0025><U0062><U0020><U0025><U0059><U0020><U0025><U0072><U0020><U0025><U005A>"
+%     "%a %d %b %Y %r %Z" 12-hour + am/pm notation
+%     "%a %d %b %Y %T %Z" 24-hour notation
+d_t_fmt "<U0025><U0061><U0020><U0025><U0064><U0020><U0025><U0062><U0020><U0025><U0059><U0020><U0025><U0054><U0020><U0025><U005A>"
 %
 % Appropriate date representation (%x)
 %	"%m/%d/%Y"
 d_fmt   "<U0025><U006D><U002F><U0025><U0064><U002F><U0025><U0059>"
 %
 % Appropriate time representation (%X)
-%	"%r"
-t_fmt   "<U0025><U0072>"
+%     "%r" - 12 hour am/pm notation
+%     "%T" - 24 hour notation
+t_fmt   "<U0025><U0054>"
 %
 % Appropriate AM/PM time representation (%r)
 %	"%I:%M:%S %p"
