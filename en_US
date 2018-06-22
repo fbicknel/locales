@@ -5,6 +5,8 @@ comment_char %
 
 % Modified for 24-hour time use
 % copy this to /usr/share/i18n/locales
+% Then run this:
+% sudo localedef -f UTF-8 -i en_US en_US.UTF-8
 
 LC_IDENTIFICATION
 title      "English locale for the USA"
