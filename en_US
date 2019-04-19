@@ -87,6 +87,7 @@ day	"Sunday";/
 	"Saturday"
 
 week 7;19971130;1
+first_weekday 2
 abmon	"Jan";"Feb";/
 	"Mar";"Apr";/
 	"May";"Jun";/
@@ -106,13 +107,15 @@ mon	"January";/
 	"November";/
 	"December"
 % Appropriate date and time representation (%c)
-d_t_fmt "%a %d %b %Y %r %Z"
+% d_t_fmt "%a %d %b %Y %r %Z"
+d_t_fmt   "%a %d %b %Y %T %Z"
 %
 % Appropriate date representation (%x)
 d_fmt   "%m//%d//%Y"
 %
 % Appropriate time representation (%X)
-t_fmt   "%r"
+% t_fmt   "%r"
+t_fmt     "%T"
 %
 % Appropriate AM/PM time representation (%r)
 t_fmt_ampm "%I:%M:%S %p"
